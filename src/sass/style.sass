@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Roboto:wght@400;500;700;900&display=swap')
 @import '_mixins'
 @import '_vars'
 
@@ -7,14 +8,538 @@
 body
     margin: 0
     padding: 0
+    font-family: $font-main
+    background-color: $color-bg
+    color: #fff
+    font-size: 18px
+    line-height: 28px
+    overflow-x: hidden
 h1,h2,h3,h4,h5,h6,p,ul,li
     margin: 0
     padding: 0
 img
     max-width: 100%
+    display: flex
 a
     text-decoration: none
-.container
-    max-width: 1200px
+.wrap
+    max-width: 1500px
     margin: 0 auto
     padding: 0 15px
+.container
+    max-width: 1920px
+    margin: 0 auto
+.color
+    color: $color-main
+.u
+    border-bottom: solid 1px $color-main
+.ul
+    list-style-type: none
+    & li
+        position: relative
+        padding-left: 30px
+        margin-bottom: 20px
+        font-size: 20px
+        line-height: 30px
+        &::after
+            content: ''
+            display: block
+            width: 16px
+            height: 16px
+            background-color: $color-main
+            border-radius: 50%
+            position: absolute
+            left: 0
+            top: .35em
+.header
+    padding: 45px 0
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &__nav
+            ul
+                list-style-type: none
+                display: flex
+                align-items: center
+                flex-wrap: wrap
+                & li
+                    margin-right: 50px
+                    & a
+                        color: #fff
+                        transition: $delay
+                        &:hover
+                            opacity: .5
+                    &:last-child
+                        margin-right: 0
+        &__lang
+            & ul
+                list-style-type: none
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                & li
+                    display: flex
+                    align-items: center
+                    & a
+                        color: #fff
+                        font-size: 20px
+                        line-height: 30px
+                        font-weight: 500
+                        &:hover
+                            text-decoration: underline
+                    &::before
+                        margin: 0 10px
+                        content: ''
+                        display: block
+                        width: 8px
+                        height: 8px
+                        background: $bg-gradien
+                        border-radius: 50%
+                    &:first-child
+                        &::before
+                            display: none
+                    &:last-child
+                        margin-left: 0
+.main
+    &-wrap
+        padding-top: 20px
+        display: flex
+        align-items: flex-end
+        &__image
+            width: 55%
+        &__content
+            width: 40%
+            &--logo
+                max-width: 620px
+                &-description
+                    padding-top: 20px
+                    font-size: 20px
+                    line-height: 24px
+                    text-transform: uppercase
+                    text-align: center
+            &--text
+                margin-top: 100px
+                max-width: 490px
+                & h1
+                    margin: 20px 0 10px
+                    font-size: 47px
+                    line-height: 66px
+                    max-width: 490px
+                &-scroll
+                    padding: 20px 0 100px
+                    animation: scroll 1s infinite
+.about
+    padding: 0 0 70px
+    background-color: #18171C
+    & .container
+        &::after
+            background: url('../img/hr-semi.svg') no-repeat right center
+            @include hr
+    &-wrap
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        flex-wrap: wrap
+        &__content
+            width: 49%
+            padding-bottom: 10px
+            & h2
+                margin: 20px 0
+                font-size: 44px
+                line-height: 66px
+            & p
+                font-size: 20px
+                line-height: 32px
+        &__image
+            width: 50%
+            position: relative
+            & img
+                z-index: 2
+                position: relative
+            &::after
+                position: absolute
+                top: 20px
+                content: ''
+                display: block
+                width: 100%
+                min-height: 420px
+                height: 100%
+                background: url('../img/bg-about__image.svg') no-repeat center center / contain
+.stars
+    padding: 70px 0
+    &-wrap
+        &__title
+            font-size: 44px
+            line-height: 58px
+            text-align: center
+            max-width: 750px
+            margin: 0 auto
+        &__list
+            margin-top: 30px
+            list-style-type: none
+            display: flex
+            flex-wrap: wrap
+            &--item
+                margin-bottom: 30px
+                background-color: #18171C
+                box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.45)
+                width: 24%
+                margin-right: 1.25%
+                &-image
+                    width: 100%
+                    height: 476px
+                    object-fit: cover
+                    filter: grayscale(100%)
+                    transition: $delay
+                &-flex
+                    min-height: 242px
+                    margin-top: -142px
+                    z-index: 2
+                    position: relative
+                    display: flex
+                    align-items: flex-end
+                    flex-wrap: wrap
+                    &_items
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        padding: 0 40px 40px
+                        background-color: #18171C
+                        margin-top: -2em
+                        padding-top: 65px
+                        width: 100%
+                        min-height: 170px
+                        & span
+                            font-size: 28px
+                            line-height: 32px
+                            max-width: 185px
+                            color: #fff
+                            overflow-wrap: anywhere
+                    &::before
+                        content: ''
+                        display: block
+                        width: 100%
+                        height: 110px
+                        z-index: 2
+                        margin-top: -65px
+                        position: relative
+                        background: url('../img/bg-stars__image.svg') no-repeat center center / cover
+                &:hover
+                    & .stars-wrap__list--item
+                        &-image
+                            filter: grayscale(0)
+                        &-flex
+                            background: url('../img/bg-stars__image--hover.svg') no-repeat center center / cover
+                            &_items
+                                background: none
+                                & svg
+                                    & *
+                                        fill: #fff
+                            &::before
+                                display: none
+                &:nth-child(4n)
+                    margin-right: 0
+.video
+    position: relative
+    background-color: #18171C
+    margin: 170px 0
+    min-height: 400px
+    & .container
+        position: relative
+    &::after
+        background: url('../img/hr-semi.svg') no-repeat right top
+        padding-bottom: 70px
+        @include hr
+    &-wrap
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        &__image
+            width: 50%
+            position: absolute
+            left: 0
+            &--play
+                @include play
+        &__content
+            width: 50%
+            padding: 75px 0 34px
+            max-width: 730px
+            & h2
+                font-size: 44px
+                line-height: 66px
+                margin-bottom: 20px
+.video2
+    margin-top: 270px
+    &::after
+        background: url('../img/hr-semi.svg') no-repeat left top
+    & .video
+        &-wrap
+            justify-content: flex-start
+            &__image
+                right: 0
+                left: auto
+            &__content
+                & .u
+.list
+    padding: 70px 0
+    &-wrap
+        &__title
+            font-size: 36px
+            line-height: 54px
+            max-width: 1010px
+            margin: 0 auto
+            text-align: center
+        &__flex
+            margin-top: 70px
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            &--image
+                width: 47.5%
+                position: relative
+                &-title
+                    position: absolute
+                    left: 50%
+                    margin-right: -50%
+                    transform: translateX(-30%)
+                    bottom: 50px
+                    background: linear-gradient(101.49deg, #3434D8 5.38%, #9980F4 100.45%)
+                    box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.45)
+                    padding: 20px 113px
+            &--content
+                width: 47.5%
+                & h2
+                    margin: 20px 0
+                    font-size: 44px
+                    line-height: 66px
+                    max-width: 729px
+                & ul
+                    list-style-type: none
+.my
+    padding: 56px 0
+    background-color: #18171C
+    &-wrap
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        &__image
+            width: 50%
+            display: flex
+            justify-content: flex-end
+        &__content
+            width: 50%
+            max-width: 878px
+            & h2
+                font-size: 44px
+                line-height: 58px
+            &--description
+                margin: 10px 0 20px
+                font-weight: 700
+                font-size: 24px
+                line-height: 32px
+            & p
+                max-width: 490px
+                font-size: 16px
+                line-height: 24px
+.hr
+    padding: 50px 0
+.benefits
+    padding: 70px 0
+    background-color: #18171C
+    &-wrap
+        &__title
+            font-size: 44px
+            line-height: 58px
+            text-align: center
+            margin-bottom: 48px
+        &__list
+            list-style-type: none
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            &--item
+                width: 49%
+                background-color: #1E1D23
+                box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.45)
+                padding: 40px 40px 40px 55px
+                display: flex
+                align-items: flex-start
+                margin-bottom: 30px
+                position: relative
+                &-icon
+                    width: 25%
+                &-content
+                    width: 100%
+                    & h3
+                        font-size: 24px
+                        line-height: 34px
+                        margin-bottom: 15px
+                    & p
+                        font-size: 14px
+                        line-height: 22px
+                &:last-child
+                    &::after
+                        position: absolute
+                        content: ''
+                        display: block
+                        width: 100%
+                        height: 100%
+                        max-width: 618px
+                        max-height: 147px
+                        background: url('../img/arrow-benefits.svg') no-repeat center center
+                        bottom: -7em
+                        right: 0
+.other
+    background-color: #18171C
+    padding: 0 0 70px
+    &-wrap
+        &__title
+            font-size: 36px
+            line-height: 46px
+            margin-bottom: 30px
+        &__list
+            list-style-type: none
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            &--item
+                width: 49%
+                background-color: #1E1D23
+                box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.45)
+                display: flex
+                justify-content: space-between
+                align-items: center
+                position: relative
+                overflow: hidden
+                min-height: 350px
+                margin-bottom: 30px
+                &::after
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    content: ''
+                    display: block
+                    width: 45%
+                    height: 100%
+                    background-color: rgba(0, 0, 0, 0.4)
+                &-image
+                    width: 45%
+                    height: 100%
+                    position: relative
+                    &::after
+                        content: ''
+                        display: block
+                        width: 100%
+                        height: 110px
+                        background: url('../img/bg-other__image.svg') no-repeat center
+                        margin-top: -100px
+                        z-index: 2
+                        position: relative
+                    & img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                &-content
+                    width: 55%
+                    padding: 40px
+                    & h2
+                        font-size: 28px
+                        line-height: 42px
+                        margin-bottom: 15px
+                    & a
+                        margin-top: 33px
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        text-transform: uppercase
+                        color: $color-main
+.together
+    padding: 70px 0
+    &-wrap
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        &__content
+            width: 50%
+            & h2
+                margin: 20px 0 20px
+                font-size: 44px
+                line-height: 66px
+                max-width: 650px
+            &--title
+                margin: 30px 0 15px
+                text-transform: uppercase
+                font-size: 20px
+                line-height: 30px
+                font-weight: 700
+                color: $color-main
+            &--description
+                font-size: 20px
+                line-height: 30px
+        &__image
+            width: 50%
+            position: relative
+            &--play
+                @include play
+.reviews
+    padding: 70px 0
+    background-color: #18171C
+    &-wrap
+        &__title
+            font-size: 44px
+            line-height: 58px
+            text-align: center
+            margin-bottom: 210px
+        &__list
+            list-style-type: none
+            display: flex
+            flex-wrap: wrap
+            margin: 0 11%
+            &--item
+                width: 31%
+                margin-right: 3.33%
+                background-color: #1E1D23
+                margin-bottom: 210px
+                text-align: center
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 4px
+                    background: linear-gradient(101.49deg, #3434D8 5.38%, rgba(152, 127, 244, 0) 100.45%), linear-gradient(90deg, #FFFFFF 0.6%, rgba(255, 255, 255, 0) 100%)
+                &-image
+                    width: 100%
+                    height: 360px
+                    margin-top: -180px
+                    position: relative
+                    &_play
+                        @include play
+                        & svg
+                            max-width: 99px
+                    & img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        border-radius: 50%
+                &-name
+                    margin: 40px 0 12px
+                    font-size: 24px
+                    line-height: 36px
+                    font-weight: 700
+                &-position
+                    font-size: 16px
+                    line-height: 24px
+                    padding-bottom: 46px
+                &:nth-child(3n)
+                    margin-right: 0
+                &:nth-child(4n), &:nth-child(5n), &:nth-child(6n)
+                    margin-bottom: 0
+
+@keyframes scroll
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(1em)
+    100%
+        transform: translateY(0)
