@@ -1,0 +1,636 @@
+@media screen and ( max-width: 1600px )
+    .video
+        margin-top: 100px
+
+@media screen and ( max-width: 1400px)
+    .main
+        &-wrap
+            &__image
+                width: 70%
+            &__content
+                width: 30%
+                margin-left: -5%
+    .about
+        padding: 70px 0
+    .video
+        margin-top: 0
+        &-wrap
+            &__image
+                top: 0
+@media screen and ( max-width: 1275px )
+    .main
+        margin-top: -2.5em
+        &-wrap
+            &__image
+                width: 50%
+                & img
+                    max-width: 600px
+            &__content
+                width: 45%
+                margin-left: 0
+                &--logo
+                    &-description
+                        text-align: left
+                    & img
+                        display: none
+                &--text
+                    margin: 20px 0
+                    & h1
+                        font-size: 35px
+                        line-height: 42px
+                    &-scroll
+                        padding-bottom: 0
+    .video
+        &-wrap
+            &__image
+                top: 5%
+    .benefits
+        &-wrap
+            &__list
+                &--item
+                    &:last-child
+                        &::after
+                            display: none
+    .reviews
+        &-wrap
+            &__list
+                margin: 0
+
+@media screen and ( max-width:  1175px)
+    .header
+        padding: 10px 0
+        &-wrap
+            &__logo
+                display: block
+                & img
+                    max-width: 250px
+            &__nav
+                position: absolute
+                height: 90vh
+                width: 100%
+                right: 0
+                top: 12vh
+                transition: $delay
+                background-color: #1E1D23
+                z-index: 10
+                opacity: 0
+                visibility: hidden
+                & ul
+                    width: 100%
+                    height: 100%
+                    flex-direction: column
+                    text-align: center
+                    & li
+                        width: 100%
+                        margin: 0
+                        padding: 20px
+                        border-top: solid 2px rgba(#fff, .1)
+                        &:last-child
+                            border-bottom: solid 2px rgba(#fff, .1)
+            & .active-nav
+                opacity: 1
+                visibility: visible
+            &__lang
+                display: none
+            &__mobile
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 40px
+                height: 40px
+                border: solid 1px #fff
+                border-radius: 50%
+                cursor: pointer
+                &--menu
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    flex-direction: column
+                    width: 26px
+                    height: 26px
+                    background: linear-gradient(101.49deg, #3434D8 5.38%, #9980F4 100.45%)
+                    border-radius: 50%
+                    padding: 8px 6px
+                    position: relative
+                    & span
+                        display: block
+                        width: 100%
+                        height: 1px
+                        background-color: #fff
+                        transition: $delay
+            & .active-menu
+                & .header-wrap__mobile--menu
+                    flex-direction: row
+                    justify-content: center
+                    align-items: center
+                    & span
+                        width: 14px
+                        &:first-child
+                            position: absolute
+                            transform: rotate(40deg)
+                        &:nth-child(2)
+                            transform: rotate(-40deg)
+                        &:last-child
+                            display: none
+    .about
+        &-wrap
+            &__content
+                & h2
+                    font-size: 30px
+                    line-height: 42px
+                & p
+                    font-size: 16px
+                    line-height: 26px
+                & img
+                    max-width: 31px
+    .stars
+        &-wrap
+            &__list
+                &--item
+                    &-flex
+                        &::before
+                            height: 200px
+    .video
+        margin-bottom: 75px
+        &-wrap
+            &__content
+                & h2
+                    font-size: 30px
+                    line-height: 40px
+            &__image
+                top: -10%
+    .list
+        &-wrap
+            &__flex
+                flex-wrap: wrap
+                &--image
+                    width: 65%
+                    margin: 0 auto
+                    text-align: center
+                    display: flex
+                    justify-content: center
+                    & img
+                        max-width: 600px
+                &--content
+                    width: 100%
+    .other
+        &-wrap
+            &__list
+                &--item
+                    width: 100%
+                    &-image
+                        &:after
+                            background-size: cover !important
+                            height: 140px
+                            margin-top: -140px
+@media screen and ( max-width: 1075px)
+    .main
+        &-wrap
+            &__image
+                & img
+                    max-width: 450px
+            &__content
+                &--logo
+                    &-description
+                        font-size: 18px
+                        line-height: 24px
+                &--text
+                    & h1
+                        font-size: 30px
+                        line-height: 36px
+    .video
+        &-wrap
+            &__image
+                top: -5%
+    .reviews
+        &-wrap
+            &__list
+                justify-content: space-between
+                margin-top: -210px
+                &--item
+                    width: 49%
+                    margin: 0 !important
+                    margin-bottom: 30px !important
+                    &-image
+                        height: 100%
+                        width: 100%
+                        max-width: 300px
+                        max-height: 300px
+                        margin: 1em auto 0
+    .nda
+        &-wrap
+            flex-wrap: wrap
+            &__content
+                width: 100%
+                order: 2
+                margin-bottom: 40px
+            &__image
+                width: 100%
+                display: flex
+                justify-content: center
+                margin: -2em 0
+                & img
+                    max-width: 500px
+                &--circle
+                    right: 15%
+                    & img
+                        max-width: 400px
+                &--title
+                    display: none
+
+@media screen and ( max-width: 1040px )
+    .video
+        margin-bottom: 40px
+        &-wrap
+            flex-wrap: wrap
+            justify-content: flex-start
+            &__image
+                position: relative
+                top: auto
+                left: auto
+                right: auto
+                width: 75%
+                margin-top: 40px
+            &__content
+                width: 100%
+                max-width: 100%
+                padding: 15px 0
+    .benefits
+        &-wrap
+            &__list
+                &--item
+                    width: 100%
+    .together
+        &-wrap
+            flex-wrap: wrap
+            &__content
+                width: 100%
+                margin-bottom: 20px
+            &__image
+                width: 100%
+    .pr
+        &-wrap
+            flex-wrap: wrap
+            &__image
+                width: 100%
+            &__content
+                width: 100%
+                margin-bottom: 40px
+    .footer
+        border-top: none
+        & .wrap
+            padding: 0
+        &-wrap
+            flex-wrap: wrap
+            &__info
+                width: 100%
+                flex-wrap: wrap
+                justify-content: center
+                align-items: center
+                border-bottom: solid 2px rgba(255,255,255, .1)
+                & img
+                    width: 100%
+                &--title
+                    width: 100%
+                    text-align: center
+                    margin: 15px 0 30px
+            &__by
+                padding-top: 20px
+                width: 100%
+                text-align: center
+
+@media screen and ( max-width: 996px)
+    .main
+        &-wrap
+            flex-wrap: wrap
+            &__image
+                width: 100%
+                & img
+                    max-width: 100%
+            &__content
+                width: 100%
+                padding: 20px 15px
+                text-align: center
+                &--logo
+                    margin: 0 auto
+                    &-description
+                        text-align: center
+                &--text
+                    margin: 20px auto 0
+                    & img
+                        margin: 0 auto
+                        max-width: 31px
+                    & p
+                        max-width: 290px
+                        margin: 0 auto
+    .about
+        padding: 10px 0
+        & .container
+            &::after
+                display: none
+        &-wrap
+            flex-wrap: wrap
+            &__content
+                width: 100%
+                order: 2
+                &::before
+                    content: ''
+                    display: block
+                    width: 110%
+                    margin-left: -5%
+                    height: 4px
+                    background: url('../img/hr.svg') no-repeat center center
+                    margin-bottom: 20px
+            &__image
+                width: 75%
+                margin: 0 auto
+    .stars
+        &-wrap
+            &__title
+                font-size: 30px
+                line-height: 42px
+    .my
+        padding: 20px 15px
+        &-wrap
+            flex-wrap: wrap
+            &__image
+                justify-content: flex-start
+                width: 100%
+            &__content
+                margin-top: 20px
+                width: 100%
+    .hr
+        & img
+            height: 4px
+    .partners
+        &-wrap
+            &__list
+                justify-content: space-between
+                &--item
+                    width: 49%
+                    margin: 0
+                    margin-bottom: 30px
+
+@media screen and ( max-width: 768px)
+    .wrap, .container
+        overflow-x: hidden
+    .header
+        &-wrap
+            &__logo
+                & img
+                    max-width: 150px
+    .starsd
+        &-wrap
+            &__list
+                display: block
+                &--item
+                    margin-right: 0
+                    &-flex
+                        &::before
+                            height: 200px
+    .video
+        &-wrap
+            &__image
+                width: 100%
+                &--play
+                    & img
+                        max-width: 70px
+            &__content
+                & h2
+                    font-size: 24px
+                    line-height: 33px
+                & p
+                    font-size: 14px
+                    line-height: 21px
+    .about
+        &-wrap
+            &__image
+                width: 100%
+                overflow: hidden
+    .list
+        margin-top: -50px
+        &-wrap
+            &__title
+                font-size: 24px
+                line-height: 36px
+            &__flex
+                &--image
+                    & img
+                        max-width: 100%
+                    &-title
+                        display: none
+                &--content
+                    & h2
+                        font-size: 30px
+                        line-height: 42px
+                    & ul
+                        & li
+                            font-size: 16px
+                            line-height: 24px
+    .benefits
+        &-wrap
+            &__title
+                font-size: 30px
+                line-height: 42px
+            &__list
+                &--item
+                    padding: 20px
+                    &-icon
+                        width: 15%
+                        margin-right: 10px
+                        & img
+                            max-width: 40px
+                    &-content
+                        & h3
+                            font-size: 18px
+                            line-height: 24px
+                        & p
+                            font-size: 12px
+                            line-height: 20px
+    .other
+        padding-bottom: 0
+        & .wrap
+            padding: 0
+        &-wrap
+            &__title
+                font-size: 24px
+                line-height: 34px
+                text-align: center
+            &__list
+                &--item
+                    display: flex
+                    flex-wrap: wrap
+                    &:after
+                        width: 100%
+                        height: 420px
+                        bottom: auto
+                        top: 0
+                    &-image
+                        width: 100%
+                        height: 320px
+                        &::after
+                            height: 110px
+                            margin-top: -110px
+                    &-content
+                        width: 100%
+                        margin-top: 0
+                        background-color: #1e1d23
+                        & h3
+                            font-size: 28px
+                            line-height: 42px
+                            margin-bottom: 15px
+                        & p
+                            font-size: 18px
+                            line-height: 28px
+                        & a
+                            justify-content: flex-start
+                            margin-bottom: 20px
+                            & span
+                                padding-left: 15px
+                                display: block
+    .together
+        &-wrap
+            &__content
+                & img
+                    max-width: 31px
+                & h2
+                    font-size: 24px
+                    line-height: 33px
+                & ul
+                    & li
+                        font-size: 16px
+                        line-height: 24px
+                &--title
+                    text-align: center
+                    font-size: 18px
+                    line-height: 27px
+                &--description
+                    text-align: center
+                    font-size: 16px
+                    line-height: 24px
+    .reviews
+        & .wrap
+            padding: 0
+        &-mobile
+            margin-top: 240px
+            display: block
+            & ul
+                display: block
+                & li
+                    width: 100%
+            & .slick-dots
+                display: flex
+                padding: 0 15px
+                & li
+                    width: auto
+                    margin: 0
+                    & button
+                        height: 6px
+                        width: 25px
+                        border-radius: 0
+                    &:first-child
+                        & button
+                            border-radius: 3px 0 0 3px
+                    &:last-child
+                        & button
+                            border-radius: 0 3px 3px 0
+
+        &-slider
+            display: none
+        &-wrap
+            &__title
+                font-size: 30px
+                line-height: 42px
+    .nda
+        &-wrap
+            &__image
+                & img
+                    max-width: 300px
+                &--circle
+                    right: 10%
+                    & img
+                        max-width: 200px
+                &--title
+                    display: none
+            &__content
+                margin-bottom: 40px
+                & img
+                    max-width: 31px
+                & p
+                    font-size: 16px
+                    line-height: 24px
+                & h2
+                    font-size: 24px
+                    line-height: 33px
+    .partners
+        &-wrap
+            &__title
+                font-size: 24px
+                line-height: 34px
+                text-align: left
+            &__list
+                display: block
+                &--item
+                    width: 100%
+            &__description
+                font-size: 20px
+                line-height: 28px
+    .pr
+        &-wrap
+            &__content
+                & h2
+                    font-size: 24px
+                    line-height: 34px
+                &--more
+                    font-size: 14px
+                    line-height: 21px
+    .my
+        &-wrap
+            &__content
+                & h2
+                    font-size: 30px
+                    line-height: 44px
+    .contacts
+        &-wrap
+            &__title
+                font-size: 30px
+                line-height: 40px
+            &__socials
+                flex-wrap: wrap
+                &--item
+                    width: 100%
+                    margin-bottom: 20px
+                    padding: 30px
+                    font-size: 24px
+                    line-height: 31px
+                    & img
+                        max-width: 30px
+            &__description
+                font-size: 14px
+                line-height: 21px
+    .footer
+        &-wrap
+            &__info
+                padding: 0 15px
+            &__by
+                padding: 15px 5px
+
+@media screen and ( max-width: 668px )
+    .about
+        &-wrap
+            &__image
+                &::after
+                    top: -10%
+
+@media screen and ( max-width: 520px )
+    .other
+        &-wrap
+            &__list
+                &--item
+                    &-image
+                        &:after
+                            height: 150px
+                            margin-top: -140px
+                    &-content
+                        z-index: 2
+                        padding: 15px
