@@ -736,6 +736,169 @@ a
                 color: #fff
                 &:hover
                     text-decoration: underline
+.personal
+    padding: 70px 0
+    &-wrap
+        max-width: 1100px
+        &__title
+            font-size: 44px
+            line-height: 66px
+            margin-bottom: 30px
+            text-align: center
+        &__video
+            position: relative
+            padding: 0 15px
+            & iframe
+                width: 100% !important
+                height: 540px !important
+                z-index: 2
+                position: relative
+            &--images
+                & img
+                    position: absolute
+                &-first
+                    top: -10%
+                    right: -20%
+                &-second
+                    left: -15%
+                    bottom: -5%
+        &__content
+            margin: 50px 0 30px
+            padding: 0 15px
+            &--title
+                font-size: 44px
+                line-height: 66px
+                text-align: center
+                margin-bottom: 21px
+            & p
+                font-size: 20px
+                line-height: 32px
+                padding-bottom: 1em
+        &__files
+            &--title
+                text-align: center
+                font-size: 24px
+                line-height: 32px
+                margin-bottom: 30px
+            &--list
+                display: flex
+                align-items: center
+                flex-wrap: wrap
+                &-item
+                    display: flex
+                    align-items: center
+                    padding: 21px 30px
+                    position: relative
+                    margin-right: 25px
+                    height: 60px
+                    overflow: hidden
+                    margin-bottom: 30px
+                    font-size: 18px
+                    line-height: 18px
+                    color: #fff
+                    font-weight: 500
+                    & img
+                        display: block
+                        margin-right: 20px
+                    &:nth-child(3n)
+                        margin-right: 0
+                    &:after, &:before
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: 2px
+                        background: linear-gradient(101.49deg, #3434D8 5.38%, #9980F4 100.45%)
+                        @include video-files
+                    &:before
+                        top: auto
+                        bottom: 0
+                    & span
+                        display: block
+                        &:after, &:before
+                            left: 0
+                            top: 0
+                            width: 2px
+                            height: 60px
+                            background: #3434D8
+                            @include video-files
+                        &:before
+                            right: 0
+                            left: auto
+                            background: linear-gradient(101.49deg, #3434D8 5.38%, #9980F4 100.45%)
+
+.charity
+    padding: 70px 0
+    &:nth-child(even)
+        background-color: #18171C
+        & .charity-wrap__item--content
+            order: 2
+    &-wrap
+        &__title
+            font-size: 44px
+            line-height: 66px
+            text-align: center
+        &__item
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &--content
+                width: 48%
+                &-circle
+                    margin-bottom: 20px
+                & h2
+                    font-size: 44px
+                    line-height: 66px
+                    margin-bottom: 20px
+                & p
+                    font-size: 20px
+                    line-height: 32px
+                    margin-bottom: 20px
+                & a
+                    font-size: 20px
+                    line-height: 32px
+                    color: $color-main
+                    font-weight: 700
+                    text-decoration: underline
+                & h3
+                    font-size: 24px
+                    line-height: 38px
+            &--image
+                width: 50%
+                position: relative
+                &-main
+                    z-index: 2
+                    position: relative
+                    & img
+                        height: 628px
+                        width: 628px
+                        object-fit: cover
+                        border-radius: 50%
+                &-circle
+                    position: absolute
+                    left: -10%
+                    top: 2em
+                &-partner
+                    position: absolute
+                    bottom: -1em
+                    right: 20%
+                    z-index: 3
+                    width: 250px
+                    height: 250px
+                    background-color: #18171C
+                    box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.75)
+                    border-radius: 50%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding: 1em
+.alert
+    padding: 70px 0
+    &-wrap
+        &__title
+            text-align: center
+            font-size: 36px
+            line-height: 54px
+
 @keyframes scroll
     0%
         transform: translateY(0)
